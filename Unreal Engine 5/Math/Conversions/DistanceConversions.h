@@ -2,27 +2,26 @@
 
 #pragma once
 
-#include "CoreMinimal.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "DistanceConversions.generated.h"
 
 UENUM(BlueprintType)
-enum class EDistanceUnit
+enum class EDistanceUnit : uint8
 {
-     Nanometer,
-     Micrometer,
-     Millimeter,
-     Centimeter,
-     Decimeter,
-     Meter,
-     Decimeter,
-     Hectometer,
-     Kilometer,
+     Nanometer UMETA(DisplayName="Nanometer"),
+     Micrometer UMETA(DisplayName="Micrometer"),
+     Millimeter UMETA(DisplayName="Millimeter"),
+     Centimeter UMETA(DisplayName="Centimeter"),
+     Decimeter UMETA(DisplayName="Decimeter"),
+     Meter UMETA(DisplayName="Meter"),
+     Decimeter UMETA(DisplayName="Decameter"),
+     Hectometer UMETA(DisplayName="Hectometer"),
+     Kilometer UMETA(DisplayName="Kilometer"),
 
-     Inch,
-     Foot,
-     Yard,
-     Mile
+     Inch UMETA(DisplayName="Inch"),
+     Foot UMETA(DisplayName="Foot"),
+     Yard UMETA(DisplayName="Yard"),
+     Mile UMETA(DisplayName="Mile")
 };
 
 
@@ -34,7 +33,11 @@ class EXAMPLEPROJECT_API UDistanceConversions : public UBlueprintFunctionLibrary
 public:
 
      UFUNCTION(BlueprintPure, Category="Math|Conversions")
-     static double Convert();
+     static double Convert(double Value, EDistanceUnit From, EDistanceUnit To);
+
+private:
+
+     static double ToMeters(EDistanceUnit Unit);
 };
 
 // EOF
