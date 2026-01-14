@@ -10,4 +10,14 @@ DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnDigitPressed, int32, Digit);
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnClearPressed);
 
+UCLASS()
+class UBasic10Key : UUserWidget
+{
+     GENERATED_BODY()
+
+public:
+
+     UBasic10Key(const FObjectInitializer& ObjectInitializer);
+};
+
 // EOF
