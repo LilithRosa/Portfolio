@@ -18,6 +18,8 @@ class UBasic10Key : UUserWidget
 public:
 
      UBasic10Key(const FObjectInitializer& ObjectInitializer);
+
+     virtual TSharedRef<SWidget>
 };
 
 // EOF
