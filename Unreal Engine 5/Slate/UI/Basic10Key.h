@@ -29,6 +29,14 @@ public:
 
 protected:
 
+     void AddDigitButton(
+           const TSharedRef<class SUniformGridPanel>& Grid,
+           int32 Digit,
+           int32 Row,
+           int32 Col
+     );
+
+     FReply OnClearClicked();
 };
 
 // EOF
