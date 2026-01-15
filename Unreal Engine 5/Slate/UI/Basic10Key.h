@@ -19,7 +19,16 @@ public:
 
      UBasic10Key(const FObjectInitializer& ObjectInitializer);
 
-     virtual TSharedRef<SWidget>
+     virtual TSharedRef<SWidget> RebuildWidget () override;
+
+     UFUNCTION(BlueprintAssignable, Category= "Keypad")
+     FOnDigitPressed DigitPressed;
+
+     UFUNCTION(BlueprintAssignable, Category= "Keypad")
+     FOnClearPressed ClearPressed;
+
+protected:
+
 };
 
 // EOF
