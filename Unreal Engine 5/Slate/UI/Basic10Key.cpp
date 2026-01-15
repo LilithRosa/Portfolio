@@ -61,4 +61,34 @@ void UBasic10Key::AddDigitButton(
      ];
 }
 
+FReply UBasic10Key::OnDigitClicked(int32 Digit)
+{
+     DigitPressed.Broadcast(Digit);
+     return FReply::Handled();
+}
+
+void UBasic10Key::AddClearButton(
+     const TSharedRef<SUniformGridPanel>& Grid,
+     int32 Row,
+     int32 Col)
+{
+     Grid->AddSlot(Col, Row)
+     [
+          SNew(SButton)
+          .OnClicked(FOnClicked::CreateUObject(this, &UBasic10Key::OnClearClicked))
+          [
+               SNew(STextBlock)
+               .Text(FText::FromString(TEXT("C")))
+               .Justification(ETextJustify::Center)
+               .Font(FSlateFontInfo("Roboto", 32))
+          ]
+     ];
+}
+
+FReply UBasic10Key::OnClearClicked()
+{
+     ClearPressed.Broadcast();
+     return FReply::Handled();
+}
+
 // EOF
