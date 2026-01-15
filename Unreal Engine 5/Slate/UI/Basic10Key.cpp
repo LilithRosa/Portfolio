@@ -34,6 +34,31 @@ TSharedRef<SWidget> UBasic10Key::RebuildWidget()
      AddDigitButton(Grid, 3, 2, 2);
 
      AddDigitButton(Grid, 0, 3, 1);
+
+     AddClearButton(Grid, 3, 2);
+
+     ScaleBox->SetContent(Grid);
+
+     return ScaleBox;
+}
+
+void UBasic10Key::AddDigitButton(
+     const TSharedRef<SUniformGridPanel>& Grid,
+     int32 Digit,
+     int32 Row,
+     int32 Col)
+{
+     Grid->AddSlot(Col, Row)
+     [
+          SNew(SButton)
+          .OnClicked(FOnClicked::CreateNewObject(this, & UBasic10Key::OnDigitClicked, Digit))
+          [
+               SNew(STextBox)
+               .Text(FText::AsNumber(Digit))
+               .Justification(ETextJustify::Center)
+               .Font(FSlateFontInfo("Roboto", 32))
+          ]
+     ];
 }
 
 // EOF
