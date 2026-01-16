@@ -28,22 +28,7 @@ public:
      FOnClearPressed ClearPressed;
 
      UFUNCTION(BlueprintAssignable, Category= "Keypad")
-     FOnAddPressed AddPressed;
-
-     UFUNCTION(BlueprintAssignable, Category= "Keypad")
-     FOnSubPressed SubPressed;
-
-     UFUNCTION(BlueprintAssignable, Category= "Keypad")
-     FOnMulPressed MulPressed;
-
-     UFUNCTION(BlueprintAssignable, Category= "Keypad")
-     FOnDivPressed DivPressed;
-
-     UFUNCTION(BlueprintAssignable, Category= "Keypad")
-     FOnEqPressed EqPressed;
-
-     UFUNCTION(BlueprintAssignable, Category= "Keypad")
-     FOnDecressed DecPressed;
+     FOnOpPressed OpPressed;
 
 protected:
 
@@ -56,13 +41,7 @@ protected:
 
      FReply OnClearClicked();
 
-     FReply OnAddClicked();
-     FReply OnSubClicked();
-     FReply OnMulClicked();
-     FReply OnDivClicked();
-
-     FReply OnEqClicked();
-     FReply OnDecClicked();
+     FReply OnOpClicked();
 };
 
 // EOF
