@@ -5,6 +5,11 @@ Introduction:
   The examples here are to showcase my programming abilities, but also to give other
 programmers ideas and tips on writing good code instead of textbook code.
 
+Note:
+  This repository is subject to change and will be documented via changelogs to show
+the progress as I add to this repository.  Due to my own schedule and the time required
+to produce good and bad code, the changes to this repository may not be consistent.
+
 About Me:
 
   My background is hands‑on systems programming, and I tend to approach problems 
