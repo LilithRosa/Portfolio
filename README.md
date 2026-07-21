@@ -1,4 +1,21 @@
 # Portfolio
-Examples of code from my personal projects.
 
-I'm an amateur programmer with some experience in Unreal Engine 5 and hope to one day go back to school to finish my degree in software engineering and design.  I started coding in highschool and stuck with it through a stint in prison, learning and relearning some basics and some fairly advanced concepts.  I hope to use this repo as my Portfolio and a means to show my work isn't just about video games.
+Introduction:
+
+  The examples here are to showcase my programming abilities, but also to give other
+programmers ideas and tips on writing good code instead of textbook code.
+
+About Me:
+
+  My background is hands‑on systems programming, and I tend to approach problems 
+from first principles rather than formal vocabulary. You may notice that I occasionally 
+use plain language instead of industry jargon.  What I do have is deep practical experience 
+with deterministic pipelines, cache‑aware data layout, branch‑predictor behavior, manual 
+memory safety, and correctness‑focused design — even if I don’t always label those techniques 
+with the textbook terms.
+
+  If you’re evaluating my work, I encourage you to look at the engineering decisions, 
+the consistency, and the performance characteristics. My terminology is improving, but my 
+ability to design and implement robust systems has been there for years.
+
+# EOF
