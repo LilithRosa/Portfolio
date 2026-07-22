@@ -2,7 +2,7 @@
 #pragma once
 
 struct Context {
-    int x = 0;;
+    int x = 0;
 };
 
 // Handler forward declarations.
